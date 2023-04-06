@@ -1,1 +1,30 @@
 /* Write your CSS here */
+.list-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text-card {
+  color: #475569;
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: bolder;
+}
+
+.btn {
+  height: 40px;
+  width: 100px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+.arrow-card {
+  width: 40px;
+  height: 35px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 20px;
+}

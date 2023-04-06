@@ -1,4 +1,3 @@
-// Write your code here
 import {Component} from 'react'
 import './index.css'
 import SuggestionItem from '../SuggestionItem'
@@ -18,7 +17,7 @@ class GoogleSuggestions extends Component {
     const {searchInput} = this.state
     const {suggestionsList} = this.props
     const findValue = suggestionsList.filter(eachItem =>
-      eachItem.suggestion.toLowerCase().include(searchInput.toLowerCase()),
+      eachItem.suggestion.toLowerCase().includes(searchInput.toLowerCase()),
     )
     return (
       <div className="app-container">
@@ -42,16 +41,16 @@ class GoogleSuggestions extends Component {
                 value={searchInput}
                 onChange={this.onInputFind}
               />
-              <ul>
-                {findValue.map(eachItem => (
-                  <SuggestionItem
-                    searchResult={eachItem}
-                    key={eachItem.id}
-                    updateInput={this.updateInput}
-                  />
-                ))}
-              </ul>
             </div>
+            <ul className="suggest-card">
+              {findValue.map(eachItem => (
+                <SuggestionItem
+                  searchResult={eachItem}
+                  key={eachItem.id}
+                  updateInput={this.updateInput}
+                />
+              ))}
+            </ul>
           </div>
         </div>
       </div>
